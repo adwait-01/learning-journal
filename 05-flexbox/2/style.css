@@ -1,0 +1,22 @@
+.container{
+    display:flex;
+    /* flex-direction: column; */
+    /* justify-content: space-evenly; */
+    align-items: flex-start;
+    /* flex-wrap: wrap; */
+    /* align-content: flex-start; */
+    /* gap: 1em; */
+}
+
+.item-1{
+    order:1;
+}
+
+.item-3{
+    /* flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 0; */
+    flex: 1; /* short-hand property of above 3 rules */
+    /* align-self: baseline; */
+    order: -1;
+}

@@ -1,0 +1,19 @@
+.flex-container {
+  display: flex;
+  flex-direction: column; /* when we changed the flex-direction to column, flex-basis refers to height instead of width */
+/*   height:400px; */
+}
+
+/* Changing things to vertical using flex-direction: column adds complexity because block-level elements default to the
+height of their content, and in this case there is no content. */
+
+/* this selector selects all divs inside of .flex-container */
+.flex-container div{
+  background: peachpuff;
+  border: 4px solid brown;
+  height: 80px;
+  flex: 1 1 auto;
+/*   flex:1; */
+/*   flex: 1 1 0; */
+/*   flex: 1 1 80px; */
+}

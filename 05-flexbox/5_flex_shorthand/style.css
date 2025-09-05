@@ -1,0 +1,9 @@
+div{
+    flex:10; /* equivalent to flex: 10 1 0; */
+    /* flex:initial; equivalent to flex: 0 1 auto;
+    flex:auto; equivalent to flex: 1 1 auto;
+    flex:none; equivalent to flex: 0 0 auto; */
+}
+
+/* By default, flex items won’t shrink below their minimum content size (the length of the longest word or fixed-size element).
+To change this, set the min-width or min-height property.  */

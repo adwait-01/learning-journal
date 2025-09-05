@@ -1,0 +1,40 @@
+div{
+
+/* Order important: */
+border-width:1em 2em 3em 4em; /* top right bottom left*/
+border-radius: 1em 2em 3em 4em; /* top-left top-right bottom-right bottom-left*/
+
+/* Order not important because each property has different value types: */
+
+/* background-color: black;
+background-image: url(../PowerOfFlexbox.png);
+background-repeat: no-repeat;
+background-position: left top; */
+
+background: black url(../PowerOfFlexbox.png) no-repeat left top; /* short-hand property of above 4 properties. */ 
+
+/* font-style:italic;
+font-weight: bold;
+font-size: 0.8em;
+line-height: 1.2;
+font-family: Arial, sans-serif; */
+
+font: italic bold 0.8em/1.2 Arial,sans-serif; /* short-hand property of above 5 properties. */
+
+/* border-width: 1px;
+border-style: solid;
+border-color: black; */
+
+border: 1px solid black;
+
+/* Position properties: */
+
+/* top: 0;
+right: 20px;
+bottom: 0;
+left: 20px; */
+
+inset: 0 20px 0 20px;
+
+/* CSS provides a universal shorthand property, all, which applies its value to every property in the document. */
+}

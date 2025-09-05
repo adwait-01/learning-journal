@@ -1,0 +1,24 @@
+ul {
+    font-family: sans-serif;
+    display: flex;
+    list-style: none;
+    border: 1px solid black;
+}
+
+li {
+    margin: 5px;
+}
+
+.links-list a {
+    /* display: inline-block; */
+    /*it fixes this issue by causing the padding to be respected by other elements: */
+    background-color: rgb(179 57 81);
+    color: white;
+    text-decoration: none;
+    padding: 1em 2em;
+}
+
+.links-list a:hover {
+    background-color: rgb(66 28 40);
+    color: white;
+}

@@ -1,0 +1,112 @@
+/* e.g. 1 */
+
+/* rule 1 */
+.subsection { 
+  color: blue;
+}
+
+/* rule 2 */
+.main .list { /* more number of class selectors*/
+  color: red;
+}
+
+/* e.g. 2 */
+
+/* rule 1 */
+#subsection {
+  color: blue;
+}
+
+/* rule 2 */
+.other-main .list {
+  color: red;
+}
+
+/* e.g. 3 */
+
+/* rule 1 */
+#subsection {
+  background-color: yellow; /*background-color has no tie-breaker situation so it does its own thing.*/
+  color: blue;
+}
+
+/* rule 2 */
+.some-other-main #subsection {
+ color: red;
+}
+
+/* Not everything adds to specificity: */
+
+/* e.g. 1 - Chaining selector & Descendant combinator */
+
+/* rule 1 */
+.class.second-class {  /*Chaining selectors*/
+  font-size: 12px;
+}
+
+/* rule 2 */
+.class .second-class { /*Descendant combinator*/
+  font-size: 24px;
+}
+
+/* Here both rule 1 and rule 2 have the same specificity. Both rules have two classes and the combinator symbol itself does not add to the specificity */
+
+/* e.g. 2 - Chaining selector & child combinator */
+
+/* rule 1 */
+.class.second-class {
+  font-size: 12px;
+}
+
+/* rule 2 */
+.class > .second-class {
+  font-size: 24px;
+}
+
+/* Even though rule 2 is using a child combinator (>), this does not change the specificity value. 
+Both rules still have two classes so they have the same specificity values. */
+
+/* e.g. 3 - Universal selector & Type selector */
+
+/* rule 1 */
+* {
+  color: black;
+}
+
+/* rule 2 */
+h1 {
+  color: orange;
+}
+
+/* Rule 2 uses a type selector, which has the lowest specificity value. But rule 1 uses the universal selector (*) which has no specificity value. */
+
+/* Inheritance: */
+
+#parent {
+  color: red;
+}
+
+.child {
+  color: blue;
+}
+
+/* Despite the parent element having a higher specificity with an ID, the child element would have the color: blue style applied since that declaration 
+directly targets it, while color: red from the parent is only inherited. */
+
+/* Rule order */
+
+.alert {
+  color: red;
+}
+
+.warning {
+  color: yellow;
+}
+
+/* the cascade would run through every other factor, including inheritance (none here) and specificity (neither rule is more specific than the other). 
+Since the .warning rule was the last one defined, 
+and no other factor was able to determine which rule to apply, it’s the one that gets applied to the element. */
+
+
+
+

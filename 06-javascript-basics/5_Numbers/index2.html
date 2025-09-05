@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Numbers</h2>
+    <p>Infinity is returned if you calculate a number outside the largest possible number:</p>
+    <p id="demo1"></p>
+    <p>Division by 0 also generates Infinity:</p>
+    <p id="demo2"></p>
+    <p>JavaScript interprets numeric constants as hexadecimal if they are preceded by 0x:</p>
+    <p id="demo3"></p>
+    <p>Using toString() to output numbers from base 2 to base 36:</p>
+    <p id="demo4"></p>
+    <h3>JavaScript Numbers as Objects: </h3>
+    <p id="demo5"></p>
+    <p>Use of == and === :</p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <script>
+        let num = 2;
+        let txt = "";
+        while(num != Infinity){
+            num = num * num;
+            txt = txt + num + "<br>";
+        }
+        document.getElementById("demo1").innerHTML = txt;
+
+        let x = 2/0;
+        let y = -2/0;
+        document.getElementById("demo2").innerHTML = x + "<br>" + y;
+
+        // Infinity is a number: typeof Infinity returns number.
+
+        let a = 0xFF;
+        document.getElementById("demo3").innerHTML = a;
+
+    // Never write a number with a leading zero (like 07).
+    // Some JavaScript versions interpret numbers as octal if they are written with a leading zero.
+
+    let myNumber = 32;
+    document.getElementById("demo4").innerHTML =
+    "Decimal 32 = " + "<br><br>" + 
+
+    "Hexatrigesimal (base 36): " + myNumber.toString(36) + "<br>" +
+    "Duotrigesimal (base 32): " + myNumber.toString(32) + "<br>" +
+    "Hexadecimal (base 16): " + myNumber.toString(16) + "<br>" +
+    "Duodecimal (base 12): " + myNumber.toString(12) + "<br>" +
+    "Decimal (base 10): " + myNumber.toString(10) + "<br>" +
+    "Octal (base 8): " + myNumber.toString(8) + "<br>" +
+    "Binary (base 2): " + myNumber.toString(2);
+
+
+    let b = 123; // b is a number
+    let c = new Number(123); // c is a Number object.
+    document.getElementById("demo5").innerHTML = typeof b + "<br>" + typeof c;
+
+    // Do not create Number objects.
+
+    // The new keyword complicates the code and slows down execution speed.
+
+    // Number Objects can produce unexpected results:
+
+    let d = 500;
+    let e = new Number(500);
+    document.getElementById("demo6").innerHTML = (d == e);
+    document.getElementById("demo7").innerHTML = (d === e);
+
+    // Comparing two JavaScript objects always returns false:
+
+    let f = new Number(500);
+    let g = new Number(500); 
+
+    // Here both == and === give false because both are objects.
+    </script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+/* Universal selector: */
+
+/* *{ 
+    color: purple;
+} */
+
+
+
+
+/* Type selector: */
+
+/* div{
+    color:red;
+} */
+
+
+
+/* Class selector: */
+
+/* .something-anything {
+  color: blue;
+} */
+
+
+
+/* ID Selector: */
+
+/* #title {
+  background-color: red;
+} */
+
+
+
+/* Grouping Selector: */
+/* .read,
+.unread,
+.not-read {
+  color: white;
+  background-color: grey;
+} */
+
+ /* .read {
+    font-style: italic;
+}   */
+
+/* .unread {
+    font-style: normal ;
+} */
+
+/* .not-read{
+    font-style: oblique;
+} */
+
+
+
+/* Chaining Selectors: */
+
+/* .subsection.header {
+  color: red;
+}
+
+.subsection#preview {
+  color: blue;
+} */
+
+
+
+/* Descendant combinator: */
+
+/* .ancestor .contents {
+  color: transparent;
+} */
+
+
+
+/* Color & Background color */
+
+p {
+  /* hex example: */
+  color: #1100ff;
+}
+
+p {
+  /* rgb example: */
+  color: rgb(100, 0, 127);
+}
+
+p {
+  /* hsl example: */
+  color: hsl(15, 82%, 56%);
+}
+
+.contents{
+    text-align: center;
+    font-family: sans-serif, 'Times New Roman', Times, serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+img {
+  height: auto;
+  width: 300px;
+}
+
+
+

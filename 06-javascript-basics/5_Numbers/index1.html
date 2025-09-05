@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Numbers</h1>
+    <p>Numbers can be written with or without decimals:</p>
+    <p id="example1"></p>
+    <p>Extra large or extra small numbers can be written with scientific (exponent) notation:</p>
+    <p id="example2"></p>
+    <h2>Floating Point Precision</h2>
+    <p>Floating point arithmetic is not always 100% accurate.</p>
+    <p id="example3"></p>
+    <h2>Addition and String concatenation using + operator </h2>
+    <p id="example4"></p>
+    <h2>String has numeric content, so JS can perform numeric operations by converting the strings to numbers:</h2>
+    <p id="example5"></p>
+    <h2>Trying to do arithmetic with a non-numeric string will result in NaN (Not a Number):</h2>
+    <p id="example6"></p>
+    <p>You can use the global JavaScript function isNaN() to find out if a value is a not a number:</p>
+    <p id="example7"></p>
+    <p id="example8"></p>
+    <p>If you use NaN in a mathematical operation, the result will also be NaN:</p>
+    <p id="example9"></p>
+    <p id="example10"></p>
+
+    <script>
+        let x = 3.14;
+        let y = 2;
+        document.getElementById("example1").innerHTML = x + "<br>" + y;
+
+        let m = 400e6;
+        let n = 23e-5;
+        document.getElementById("example2").innerHTML = m + "<br>" + n;
+
+        let a = 0.1 + 0.2;
+        document.getElementById("example3").innerHTML = "0.1 + 0.2 = " + a + " (The maximum number of decimals is 17.)";
+
+        // In JS, numbers are stored in double precision floating point representation. Integers are accurate upto 15 digits. 
+        // The maximum number of decimals is 17.
+
+        // To solve the above problem, it helps to multiply & divide:
+        // let x = (0.2 * 10 + 0.1 * 10) / 10; It gives 0.3 exactly.
+
+        let b = 10;
+        let c = 20;
+        let d = "30";
+        let e = b + c + d; // The JavaScript interpreter works from left to right. So first addition then concatenation here in this example.
+        document.getElementById("example4").innerHTML = e;
+
+        // JavaScript will try to convert strings to numbers in all numeric operations (except +):
+        let f = "100";
+        let g = "10";
+        let h = f / g;
+        document.getElementById("example5").innerHTML = h;
+
+        document.getElementById("example6").innerHTML = 100/"Adwait"; // but 100/"10" gives us an answer of 10.
+        document.getElementById("example7").innerHTML = isNaN("10"/25);
+        document.getElementById("example8").innerHTML = isNaN("adwait"/25);
+
+        let i = 10;
+        let j = NaN;
+        document.getElementById("example9").innerHTML = i + j; // try NaN + "adwait" and see the output.
+
+        document.getElementById("example10").innerHTML = typeof NaN; // NaN is a number.
+    </script>
+</body>
+</html>

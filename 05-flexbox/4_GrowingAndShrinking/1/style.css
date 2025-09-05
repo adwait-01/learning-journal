@@ -1,0 +1,5 @@
+div{
+    flex: 1; 
+    /* flex: 1 equates to: flex-grow: 1, flex-shrink: 1, flex-basis: 0. */
+    /* we're actually specifying a shorthand of flex: 1 1 0. */
+}

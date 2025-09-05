@@ -1,0 +1,16 @@
+
+/* This should be the way we start declaring our CSS. It is good practice. */
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+
+/* Then we can write whatever rules we want to write */
+

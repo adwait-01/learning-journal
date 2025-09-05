@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Arithmetic</h1>
+    <h2>The / Operator:</h2>
+    <p id="example1"></p>
+    <h2>The %(remainer) operator:</h2>
+    <p id="example2"></p>
+    <h2>The ++ operator:</h2>
+    <p id="example3"></p>
+    <h2>The ** operator:</h2>
+    <p id="example4"></p>
+    <h3>Same result with Math.pow():</h3>
+    <p id="example5"></p>
+    <h2>Operator Precedence:</h2>
+    <p id="example6"></p>
+    <p id="example7"></p>
+
+    <script>
+        let x = 5, y = 2, z;
+        z = x / y;
+        document.getElementById("example1").innerHTML = z;
+
+        let m = 7, n = 3, l;
+        l = m % n;
+        document.getElementById("example2").innerHTML = l;
+
+        let a = 2, b;
+        a++;
+        b = a;
+        document.getElementById("example3").innerHTML = b;
+
+        let c = 5, d = 4, e;
+        e = c ** d;
+        f = Math.pow(c,d);
+        document.getElementById("example4").innerHTML = e;
+        document.getElementById("example5").innerHTML = f;
+
+        document.getElementById("example6").innerHTML = (100+150) * 3;
+        document.getElementById("example7").innerHTML = 100 + 150 * 3;
+    </script>
+</body>
+</html>

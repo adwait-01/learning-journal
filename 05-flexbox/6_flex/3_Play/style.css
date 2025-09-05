@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  background-color: #f4f7f8;
+
+  /* very interesting properties: */
+  resize: horizontal; 
+  overflow: hidden; 
+
+  display: flex;
+  margin: 1em;
+}
+
+.item {
+  margin: 1em;
+  padding: 0.5em;
+
+  /* Specifying width and mid-width:  */
+  width: 110px;
+  min-width: 0;
+  /* By default flex items don't shrink below their min-content size.
+  To change this, set the item's min-width or min-height. */
+
+  background-color: #1b5385;
+  color: white;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+.initial {
+  flex: initial;
+}
+
+.auto {
+  flex: auto;
+}
+
+.none {
+  flex: none;
+}
+
+.four {
+  flex: 4;
+}
+
+.two {
+  flex: 2;
+}
+
+.one {
+  flex: 1;
+}

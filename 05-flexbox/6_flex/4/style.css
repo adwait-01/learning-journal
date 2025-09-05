@@ -1,0 +1,15 @@
+#flex-container {
+  border: 2px dashed gray;
+  display: flex;
+}
+
+#flex-auto {
+  cursor: pointer;
+  background-color: wheat;
+
+  flex: auto;
+}
+
+#default {
+  background-color: lightblue;
+}

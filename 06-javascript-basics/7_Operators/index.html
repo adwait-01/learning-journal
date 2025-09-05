@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert('6'/'2'); // 3, converts both operands to numbers.
+
+        // The unary operator + doesn't do anything to numbers but if the operand is not a number, it converts it into a number.
+        // does the same thing as Number(), but is shorter.
+        alert(+true); // 1
+        alert(+""); // 0 
+
+        let a = 2, b = 4;
+        alert(+a + +b); // 6. Unary plus is applied before the binary + because of their higher precedence.
+        // longer variant: alert(Number(a) + Number(b));
+
+        let c = 3 - (a = b - 1); // c = 0, a = 3, b = 4.
+
+        let d,e,f;
+        d = e = f = 2+2; // d=2, e=2, f=2. This is called chaining assignments: get evaluated from right to left. So first 2+2 is evaluated. 
+        // Exact meaning:
+        f = 2+2;
+        e = f;
+        d = e;
+
+        // Short “modify-and-assign” operators exist for all arithmetical and bitwise operators: /=, -=, etc.
+
+        // Such operators have the same precedence as a normal assignment, so they run after most other calculations.
+
+        // Comma operator:
+        // The comma operator allows us to evaluate several expressions, dividing them with a comma ,.
+        // Each of them is evaluated but only the result of the last one is returned (if at all we return something).
+
+        let x = (1+2,3+4);
+        alert(x); // 7 i.e. 3+4 is done and stored in x i.e. the later expression.
+
+        // Comma operator has a precedence value of 1 i.e. the lowest. So it is evaluated at last;
+        y = 3,4; // y = 3. as = has higher precedence(2) than ,(1).
+
+        // People use it in more complex constructs to put several actions in one line:
+        for (a = 1, b = 3, c = a * b; a < 10; a++) { // three opertions in one line.
+            console.log(a+b+c);
+        }
+
+        // Summary:
+
+        // "" + 1 + 0 = "10" 
+        // "" - 1 + 0 = -1 
+        // true + false = 1
+        // 6 / "3" = 2
+        // "2" * "3" = 6
+        // 4 + 5 + "px" = "9px"
+        // "$" + 4 + 5 = "$45"
+        // "4" - 2 = 2
+        // "4px" - 2 = NaN
+        // "  -9  " + 5 = "  -9  5" 
+        // "  -9  " - 5 = -14 
+        // null + 1 = 1  // null becomes 0 after the numeric conversion.
+        // undefined + 1 = NaN // und
+        // efined becomes NaN after the numeric conversion.
+        // " \t \n" - 2 = -2 
+        // Space characters are trimmed off string start and end when a string is converted to a number.
+        // So, in the last example, the whole string consists of space characters, such as \t, \n and a “regular” space between them.
+        // So, similarly to an empty string, it becomes 0.
+
+        let l = prompt("First number?", 1);
+        let m = prompt("Second number?", 2);
+
+        alert(l + m); // 12 instead of 3. can be fixed directly using alert(+l + +m)
+
+        // How to fix it:
+        l = Number(l); // or l = +l;
+        m = Number(m); // or m = +m;
+
+        // or directly (showing another example):
+        let n = +prompt("First number?",1); // or Number(prompt("First number?",1));
+        let o = +prompt("Second number?",2);
+        
+        console.log(n+o); // logs 3.
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+}
+
+
+button{
+    font-family: "helvetica neue", helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px solid rgb(45, 122, 167);
+    background-color: blanchedalmond;
+    box-shadow: 1px 1px 2px rgb(0 0 200 / 40%);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 3px 10px;
+}

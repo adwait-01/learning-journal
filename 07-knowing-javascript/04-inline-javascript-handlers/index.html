@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="script.js"></script>
+    <!-- OR <script src="script.js" defer></script> and we also don't need to use window.createParagraph = createParagraph in the script.js file. -->
+</head>
+<body>
+    <button onclick="createParagraph()">Click me</button>
+    <!-- Bad practice: you'd have to include the onclick="createParagraph()" attribute on every button you want the JavaScript to apply to. -->
+</body>
+</html>
+
+<!-- Similarities and differences between defer and module:
+
+Both wait until the DOM is parsed before running → so no “DOM not ready” problems.
+
+But the key difference is:
+
+defer: classic script, globals go to window.
+
+type="module": isolated module scope, nothing goes to window unless you put it there. -->
+
+
+
+<!-- Why modules are designed this way
+
+If modules automatically polluted the global scope, they’d break the whole point of modular code.
+
+The idea is:
+
+You explicitly export things from one file.
+
+You explicitly import them in another.
+
+No more accidental global leaks like old-school JS.
+
+✅ So in short:
+
+defer = runs after DOM is ready + still global.
+
+type="module" = runs after DOM is ready + private scope.
+
+That’s why your inline onclick works with defer but not with type="module". -->

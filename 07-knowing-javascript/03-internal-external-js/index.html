@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply Javascript example</title>
+    <script src="script.js" defer></script> <!--OR <script type="module" src="script.js"></script>-->
+</head>
+<body>
+    <button>Click Me</button> <br> <br> 
+    <button>Click Me instead</button> <br> <br>
+    <button>Or me </button>
+</body>
+</html>
+
+
+<!-- because of live server extension, or "serve" because of nodejs, the website i opened was in http which is the less secure version of https. 
+but opening the index.html file without the live server is causing the link to be file:// something like this which is not http at all.
+and then using just src without "defer" or type=module makes it run fine on file:// links but causes problem when defined in the head tag because the DOM is 
+not initialized until then.
+when we use "defer" or use the script src tag at the bottom of the body element, the dom is initialized until then, so it runs perfectly.
+by default, type=module makes it defer. so we use type=module instead of defer. but there's a cache. modules require http to run. i.e. server to run. 
+without http, it shows CORS, i.e. Cross Origin Request blocked. so to use modules we require http. as i opened the browser using the live server extension,
+my link was http from beginning, 
+so using modules didnt give me any error.
+but if it would have been file://, it would have given CORS in the developer console.
+and another thing. as my live server was using 3000 port.
+when i used npm install -g serve, it gave me another port because 3000 was already running. -->
+
+<!-- Summary: -->
+
+
+<!-- ✅ Protocols
+
+file:// → directly loading files from disk, no HTTP involved.
+
+http:// → when using a local dev server (Live Server, serve, etc.), browser requests files via HTTP.
+
+https:// → same as HTTP but encrypted. Not used by default for local dev unless you configure certificates.
+
+✅ Classic scripts
+
+<script src="..."></script> in <head> → runs immediately, DOM not ready → problem.
+
+Solution:
+
+Add defer → waits for DOM to be parsed.
+
+OR move script to bottom of <body>.
+
+✅ Module scripts
+
+<script type="module" src="..."></script> →
+
+Modules are deferred by default ✅.
+
+No need for defer.
+
+BUT require HTTP → otherwise file:// gives CORS errors. -->
+
+
+<!-- Alright, here’s the rule of thumb 📝:
+
+👉 If you’re using modern JavaScript (import, export, type="module") → always open your project with a local server (http://...).
+
+👉 If you’re using a simple script without modules → you can open with file://, but make sure the DOM exists before your script runs (use defer or put script at bottom).
+
+That’s it. 🚀
+Everything else (CORS errors, DOM not ready, ports in use) is just a side effect of these two rules. -->

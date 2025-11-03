@@ -1,4 +1,4 @@
-This repository contains my coding practice as I learn full-stack web development.
+This repository contains my learning journey of full-stack web development.
 It is a record of my progress through hands-on exercises and consistent practice.
 
 ## Purpose

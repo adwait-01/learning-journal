@@ -1,0 +1,5 @@
+For linear gradient, 90 degrees or 135 degrees look good. 
+
+font, then images, then colors, then comes our CSS.
+
+Assignment: Add a wave svg at the bottom of the webpage to make it look nice. (Link of svg wave generator - "Get Waves" is in the bookmarks.) - Learn how to use it and put it to use to the webpage.

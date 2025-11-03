@@ -1,0 +1,20 @@
+Design an entire webpage. Use Bootstrap components as much as you like or as less as you like.
+
+At the very top, there should be a carousel. How big or how small, that's up to you. You want to control the width of the images, it should be like 500px or just a whole page, it's up to you. But I want that this should take 25 percent of the webpage or 20 percent, it's up to you, choose that. 
+
+Go to the Bootstrap and you will find that there are carousel components up there. Use the whole code, but you have to control it a little bit wherever required. Feel free to use any of the pics that I have clicked from pexels.com account of hitesh. All photos are freely available. Try to control the width and height of the images and you can put the source as well. This is the part one - this is how you are going to make the carousel. 
+
+Next is the card component. You need to have exactly three cards. For a card, go to my youtube channel, pick any of the thumbnails or just choose any of the images from the pexels. But all of them should be linked up to any of my three youtube videos. Anybody who clicks on watch now should be redirected to the watch page. 
+
+At the very bottom of the webpage, there should be a footer which says copyright and your name, and also inject the copyright symbol. 
+
+
+The imp thing is - this page needs to be mobile-friendly, mobile design. The best part about Bootstrap is - it will take care of the carousel automatically, you don't have to do anything. So this carousel is already mobile-friendly, mobile-optimized, mobile-responsive. But the cards are not. So feel free to use flexbox/grid to do that. On the mobile or smaller screens, these three cards should not be all together, they should be stacked up, one above another. 
+
+Also make sure whatever you put on the copyright, it should be descent on the mobile screen as well. You can shrink the font if you wish or the "copyright" word and your name stacked one above another, it's totally up to you. 
+
+Feel free to use the color you want.
+
+Such assignment actually makes you a developer.
+
+I would be really happy to see that what kind of design you are taking: are you taking bootstrap cards, or customized cards from codepen or injecting own custom CSS. 

@@ -1,0 +1,17 @@
+Try to see what you can build. Unleash your creativity. 
+
+Twitter - @hiteshdotcom Discord - hitesh.ai/discord
+
+Build 4 things. Four of them are going to be cards.
+1. Big Webpage.
+2. Background of the Webpage can be image/gradient/solid color/whatever you wish. 
+3. At the centre of the page, We need to have one card.
+4. The card needs to have : an image, a title, a subtitle, two buttons - Buy now , Add to cart: Instead of text, you can add icons as well if you wish. 
+
+Inspiration for icons - Font Awesome (Bookmarked) - Some are paid and a lot are free. Go through their instructions of how to use them. 
+
+First of all, work on the positioning of the cards. If you want to display all the four cards at once, that's fine. If you want to have four different pages for the four cards, that's also fine. 
+
+Feel free to use flexbox or grid, whatever you like. 
+
+Search and look for "card html and css codepen" - take inspiration or take their code for some parts if needed and modify as you like. 

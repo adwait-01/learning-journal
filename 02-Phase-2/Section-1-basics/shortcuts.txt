@@ -1,0 +1,16 @@
+Ctrl + P
+Ctrl + Shift + P
+Ctrl + ,
+Ctrl + `
+Ctrl + W 
+Ctrl + X
+Ctrl + Right/Left Arrow
+Ctrl + Shift + Right/Left Arrow
+Ctrl + B
+Ctrl + Backspace
+Select a word/phrase, then Ctrl + D
+
+Shift + Left/Right Arrow
+
+Alt + Up/Down Arrow
+Alt + Click at Multiple Places

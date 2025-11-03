@@ -1,0 +1,229 @@
+<!-- See, hunt, debug.  -->
+<!-- Whenever we are learning things, look for the errors. Look for it, hunt for it. Debug it. Once we debug things, we are able to debug faster and learn more. Programming is less about coding and more about debugging.  
+ This is the difference between senior and junior developers. Seniors have seen enough of the problem to go hunt for it and look at exact place where the problem appears. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Bar Variations</title>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #242424;
+        color: #fff;
+      }
+      .nav-container {
+        margin-bottom: 40px;
+      }
+      h2 {
+        margin-bottom: 10px;
+      }
+      .nav1 {
+        /* border: 2px solid red; */ /* to have an idea of which area we are working on */
+        background-color: #eaeaea;
+        padding: 10px;
+      }
+      .nav1 ul {
+        list-style-type: none;
+
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .nav1 li {
+        display: inline; /* so that they do not create any problem in the future. */
+      }
+      /* Always try to write smaller CSS. They are always good in the long term. */
+      .nav1 a {
+        text-decoration: none;
+        color: #202020;
+        /* background-color: #d45b04; */
+        padding: 5px 15px;
+        position: relative;
+        /* This relative positioning is necessary to tell its child i.e. ::after to be positioned absolutely to its parent i.e. a tag. */
+        /* without mentioning this position: relative; -> the hovering effect is caused at the bottom of the webpage because we did not tell whose position is the absolute position relative to.  */
+      }
+
+      /* Pseudo-element means the element doesn't exist. It's an artificial, it's a generated one. It's the last child of the selected element. It is inline by default. */
+
+      .nav1 a::after {
+        /* hover hele jo after property ta lagiba -> se after property ta kan seta aame emti define kariba */
+        /* after property always needs to have a content. */
+        content: ""; /* try "abc" */
+        position: absolute;
+        /* absolute means I am telling absolutely where it has to appear. */
+        /* all the positioning I am referring to is absolute, but is relative to the parent i.e. the a tag on which after property is being added. */
+        /* If we don't mention the a tag i.e. its parent tag as positon: relative; , then it takes the entire html <body> tag as its parent and thus the hovering is caused at the bottom of the webpage.  */
+        bottom: 0; /* absolute position mentioned*/
+        left: 0; /* absolute position mentioned*/
+
+        height: 2px;
+        width: 100%;
+        /* 100 percent means entire length of the element (with padding & border as well) */
+        /* content, position, bottom, left, height, width are boilerplate codes that we need to write always in the ::after pseudo element. */
+        background-color: #0a65c7;
+
+        transform: scaleX(0);
+        transition: transform 0.3s ease-in-out;
+      }
+      .nav1 a:hover::after {
+        /* hover hele hin after property lagiba */
+        transform: scaleX(1); /* 1 means 100 percent*/
+      }
+
+      .nav1 .login-btn {
+        background-color: #254bf6;
+        color: #fff;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .nav2 {
+        /* border: 2px solid red; */
+        background-color: #03643c;
+        width: 200px;
+        padding: 20px;
+      }
+      .nav2 ul {
+        list-style-type: none;
+        /* Because ul element has a default padding and margin, we remove it in the beginning: */
+        margin: 0;
+        padding: 0;
+      }
+      .nav2 li {
+        margin-bottom: 12px;
+      }
+      .nav2 a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        padding: 10px;
+        width: 100%;
+        /* takes all the width of the container i.e. 300px which we have defined the container's width to be. */
+      }
+      .nav2 a:hover {
+        background-color: #137e0a;
+      }
+      .nav2 .login-btn {
+        background-color: #048a2f;
+        color: #fff;
+        border: none;
+        width: 100%;
+        /* takes 100 percent of the width of the container.  */
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      .nav2 .login-btn:hover {
+        background-color: #12583b;
+        /* border: 1px solid white; */
+        /* adding a border is actually moving the container because the border height is also being calculated. There are ways by which we can actually remove that. We can always learn by doing and experimenting.  */
+      }
+
+      .nav3 {
+        background-color: #45a2bb;
+        padding: 10px;
+      }
+      .nav3 ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .nav3 a {
+        text-decoration: none;
+        color: #fff;
+        padding: 10px;
+        display: block;
+        /* takes up all the width from left to right of the parent container.*/
+      }
+      .nav3 .dropdown-content {
+        display: none;
+      }
+
+      .nav3 .dropdown:hover .dropdown-content {
+        /* As soon as we hover, the display is changed from none to block */
+        display: block;
+        position: absolute;
+        /* try position: relative; -> Whenever we mention position: absolute; it literally actually rips apart our content from our DOM and puts it somewhere else. So it just removes it from the document. So all the behaviour that we see of moving the content and additional space, this can be avoided with that. */
+        background-color: #3e3e3e;
+        min-width: 150px;
+      }
+
+      /* Some hit-and-trials by me:) : */
+
+      .dropdown-content a:hover {
+        background-color: #302c2c;
+      }
+
+      .nav3 .dropdown {
+        position: relative;
+        /* parent of .dropdown:hover is .dropdown,
+        so we had to mention its position as relative before giving absolute positions to its child. Otherwise it's child will take the html <body> as its parent which will cause problems. */
+      }
+
+      .nav3 .dropdown:hover .dropdown-content {
+        position: absolute;
+        /* bottom: 0; */
+        /* left: 0; */
+        /* right: 0; */
+        /* top: 0; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav-container">
+      <h2>Variation 1: Horizontal with underline effect</h2>
+      <nav class="nav1">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="nav-container">
+      <h2>Variation 2: Vertical with hover effect</h2>
+      <nav class="nav2">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
+        </ul>
+        <button class="login-btn">Login</button>
+      </nav>
+    </div>
+
+    <div class="nav-container">
+      <h2>Variation 3: Horizontal with dropdown</h2>
+      <nav class="nav3">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li class="dropdown">
+            <a href="#">About</a>
+            <div class="dropdown-content">
+              <a href="#">Our Story</a>
+              <a href="#">Team</a>
+              <a href="#">Contact</a>
+            </div>
+          </li>
+          <li><a href="#">Products</a></li>
+          <li><button class="login-btn">Login</button></li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h1>Login form</h1>
+    <form>
+      <label for="email">
+        Email:
+        <input type="text" name="email" />
+      </label>
+      <label for="password">
+        Password:
+        <input
+          type="password"
+          placeholder="Enter your password"
+          name="password"
+          id=""
+        />
+      </label>
+      <button type="submit">Login</button>
+      <!-- for attribute of label tag and name attribute of input tag should be same -->
+      <!-- button tag should be inside the form tag -->
+      <button type="reset">Reset</button>
+    </form>
+
+    <div>
+      <h2>Learning form</h2>
+      <form>
+        <label for="email">
+          Email:
+          <input type="email" placeholder="Email" name="email" id="" />
+        </label>
+        <!-- input:url -->
+        <label for="site">
+          Name of site:
+          <input type="url" name="site" id="" />
+        </label>
+        <label for="Bio">
+          Bio:
+          <textarea name="Bio" id="yourself" rows="5" cols="33">
+Write something about you</textarea
+          >
+        </label>
+        <label for="Sport">
+          Cricket: <input type="checkbox" name="" id="" />
+        </label>
+        <label for="Sport">
+          Football: <input type="checkbox" name="" id="" />
+        </label>
+        <label for="Sport">
+          Basketball: <input type="radio" name="" id="" />
+        </label>
+        <label for="Food Preference">
+          <select name="Food Preference" id="">
+            <option value="Veg">Veg</option>
+            <option value="Non-veg">Non-veg</option>
+            <option value="Vegan">Vegan</option>
+          </select>
+        </label>
+        <label for="month"> Month: <input type="month" name="" id="" /> </label>
+        <!-- Ctrl + Spacebar to see the different values that an attribute can have inside the "" -->
+        <label for="color">
+          Color:
+          <input type="color" name="color" id="" />
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive design</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #1a1a1a;
+      }
+      .responsive-div {
+        width: 100%;
+        max-width: 1200px;
+        padding: 20px;
+        color: #fff;
+        font-size: 26px;
+        background-color: #7e0a93;
+      }
+      /* Whenever we work with the mobile responsive device, we have to provide some media queries. */
+      /* Media queries are annotated symbols which specifically mention that what do you want to happen on a certain pixel size  */
+      /* @media alone doesn't work. We have to provide a breakpoint inside ().
+      After we do that, the @media(breakpoint) becomes a whole CSS. */
+      /* For mobiles: */
+      @media (max-width: 600px) {
+        /* Media queries just overwrite the stuff written inside them. Rest everything they take as it is from normal CSS which is already provided. */
+        body {
+          align-items: flex-start;
+        }
+        .responsive-div {
+          background-color: #3498db;
+        }
+      }
+      /* For tablets: */
+      @media (min-width: 601px) and (max-width: 1024px) {
+        body {
+          align-items: center;
+        }
+        .responsive-div {
+          background-color: #e74c3c;
+        }
+      }
+
+      /* These are just examples but rest of the thing is just a laborious work.
+      Once you define your breakpoints, you start working on the views that you want. 
+      If you want to hide certain elements on the mobile screen, you go ahead and select those classes and set the display property to none. 
+      If you want the text is pretty big, you want the smaller text, you select that text element, reduce down the font and on the bigger screen, it automatically becomes bigger */
+    </style>
+  </head>
+  <body>
+    <div class="responsive-div">
+      this div changes color based on the screen size
+    </div>
+  </body>
+</html>

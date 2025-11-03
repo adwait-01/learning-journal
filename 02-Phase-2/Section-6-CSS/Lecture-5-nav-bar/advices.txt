@@ -1,0 +1,17 @@
+After watching a video, go through a little bit about the topics taught in the lecture, practice them, create few new files and explore a little bit on the documentation website or some more supplemental material. 
+
+Remember, learning cannot be done by watching videos or content. We need to supplement it with little bit of reading on our own or documentation or practicing a little bit. 
+
+Do not binge watch the videos.
+
+Practice, Practice, Practice. 
+We can always learn by doing, experimenting, and building new things. 
+
+Learn on the go. Hit & trial stuff, comment out and see what's something doing particularly and what's not happening when it's not there.
+
+Supplement these lectures with own learning as well.
+e.g. Learn more about positions: absolute and relative positions.
+
+Study more, document more. Try to experiment more with the code, that's the only way to learn.
+
+The only way to learn is by doing.
